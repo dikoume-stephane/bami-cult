@@ -1,0 +1,178 @@
+/* ===========================
+   DESIGN TOKENS — Système de Double Thème
+   Site Bamiléké — Culture & Traditions
+   =========================== */
+
+/*
+  Thème 1 : "Sacré & Royal" (Sombre — Par défaut)
+  → Noir organique, bleu Ndop, rouge latérite, bronze des statues
+  → Évoque la nuit, les masques, le mystère et la royauté
+
+  Thème 2 : "Hautes Terres & Argile" (Clair — Alternatif)
+  → Blanc argile, ocre paille, rouge profond, bronze patiné
+  → Évoque la terre cuite, les toits de chaume, le soleil des plateaux
+*/
+
+/* ============================================================
+   THÈME SOMBRE — "Sacré & Royal" (Défaut)
+   ============================================================ */
+:root {
+
+  /* --- Palette de Couleurs --- */
+
+  /* Fond : noir organique terreux, évite le noir pur #000 */
+  --bg-primary: #0D0D0D;
+
+  /* Fond : bleu indigo profond — couleur du tissu Ndop teint à l'indigo */
+  --bg-secondary: #1A2844;
+
+  /* Fond : gris très sombre pour conteneurs et placeholders */
+  --bg-tertiary: #121212;
+  --bg-placeholder: #1A1A1A;
+
+  /* Accent majeur : rouge latérite vif — terre rouge des hauts-plateaux */
+  --accent-red: #A63A2B;
+
+  /* Accent : rouge latérite profond — variante pour survols */
+  --accent-red-hover: #7E2217;
+
+  /* Accent ornemental : bronze/or des statues et trônes sculptés */
+  --accent-gold: #C5A059;
+
+  /* Accent or : variante subtile pour bordures et détails */
+  --accent-gold-muted: rgba(197, 160, 89, 0.25);
+
+  /* Texte principal : blanc ivoire doux — lisibilité sur fond sombre */
+  --text-primary: #F5F5F0;
+
+  /* Texte secondaire : gris clair — corps de texte, descriptions */
+  --text-body: #CCCCCC;
+
+  /* Texte tertiaire : gris moyen — notes, mentions légales */
+  --text-muted: #888888;
+
+  /* --- Ombres et Effets --- */
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.6);
+
+  --overlay-dark: rgba(13, 13, 13, 0.7);
+  --overlay-gradient: linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+
+  /* --- Bordures --- */
+
+  /* Bordure subtile — séparateurs et cartes */
+  --border-subtle: 1px solid rgba(245, 245, 240, 0.08);
+
+  /* Bordure accent — éléments actifs, liens */
+  --border-accent: 1px solid var(--accent-red);
+
+  /* Bordure dorée — éléments nobles, highlights */
+  --border-gold: 1px solid var(--accent-gold-muted);
+
+  /* --- Typographie --- */
+
+  /* Police de titre : serif éditoriale — haute couture, élégance */
+  --font-title: 'Playfair Display', Georgia, serif;
+
+  /* Police de corps : sans-serif géométrique — modernité, lisibilité */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Échelle responsive avec clamp() */
+  --fs-hero: clamp(3rem, 8vw, 7rem);
+  --fs-h1: clamp(2.5rem, 6vw, 5rem);
+  --fs-h2: clamp(2rem, 4vw, 3.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-body: clamp(1rem, 1.5vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  /* Graisses */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* Interlignes */
+  --lh-tight: 1.1;
+  --lh-normal: 1.6;
+
+  /* Espacement des lettres */
+  --ls-tight: -0.02em;
+  --ls-normal: 0.03em;
+  --ls-wide: 0.15em;
+
+  /* --- Espacement --- */
+
+  --section-padding: clamp(4rem, 10vw, 10rem);
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --gap-sm: 1rem;
+  --gap-md: 2rem;
+  --gap-lg: 4rem;
+
+  /* --- Transitions --- */
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s ease;
+  --transition-slow: 0.6s ease;
+
+  /* --- Thème actif --- */
+  --theme: dark;
+}
+
+
+/* ============================================================
+   THÈME CLAIR — "Hautes Terres & Argile"
+   ============================================================ */
+:root[data-theme="light"] {
+
+  /* --- Palette de Couleurs --- */
+
+  /* Fond : blanc argileux — écorce lavée, pierre des chefferies */
+  --bg-primary: #F9F8F6;
+
+  /* Fond : ocre jaune — paille de chaume séché, terre sèche */
+  --bg-secondary: #F0EAE1;
+
+  /* Fond : blanc légèrement plus froid pour contrastes */
+  --bg-tertiary: #EDE9E3;
+  --bg-placeholder: #E5E0D8;
+
+  /* Accent majeur : rouge latérite profond — terre cuite, sang ancien */
+  --accent-red: #7E2217;
+
+  /* Accent : rouge latérite vif — variante pour survols */
+  --accent-red-hover: #A63A2B;
+
+  /* Accent ornemental : bronze patiné sombre — métal vieilli */
+  --accent-gold: #8A6F3E;
+
+  /* Accent or : variante subtile pour bordures et détails */
+  --accent-gold-muted: rgba(138, 111, 62, 0.2);
+
+  /* Texte principal : noir organique — charbon, encre traditionnelle */
+  --text-primary: #1A1A1A;
+
+  /* Texte secondaire : brun terreux estompé — terre battue */
+  --text-body: #5A524C;
+
+  /* Texte tertiaire : gris brun — notes discrètes */
+  --text-muted: #8A8279;
+
+  /* --- Ombres et Effets --- */
+
+  --shadow-card: 0 4px 24px rgba(26, 26, 26, 0.08);
+  --shadow-elevated: 0 8px 40px rgba(26, 26, 26, 0.12);
+
+  --overlay-dark: rgba(249, 248, 246, 0.7);
+  --overlay-gradient: linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+
+  /* --- Bordures --- */
+
+  --border-subtle: 1px solid rgba(26, 26, 26, 0.08);
+  --border-accent: 1px solid var(--accent-red);
+  --border-gold: 1px solid var(--accent-gold-muted);
+
+  /* --- Thème actif --- */
+  --theme: light;
+}
